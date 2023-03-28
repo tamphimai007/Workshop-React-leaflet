@@ -23,6 +23,12 @@ const WMSLayer = () => {
                 format='image/png'
                 transparent={true}
             />
+            <WMSTileLayer
+                url='http://localhost:8080/geoserver/Map50K_WMS/wms'
+                layers='Map50K_WMS:isan'
+                format='image/png'
+                transparent={true}
+            />
 
         </>
     )

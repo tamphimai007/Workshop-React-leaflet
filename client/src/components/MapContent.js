@@ -52,7 +52,6 @@ let DefaultIcon = L.icon({
 });
 L.Marker.prototype.options.icon = DefaultIcon;
 
-
 let airMarker = L.icon({
     iconUrl: iconAir,
     iconSize: [20, 20],
@@ -64,11 +63,6 @@ let firmMarker = L.icon({
     iconSize: [10, 10],
     iconAnchor: [5, 5]
 })
-
-
-
-
-
 
 const MapContent = () => {
     // javascript
@@ -82,9 +76,6 @@ const MapContent = () => {
         icon: '',
         size: ''
     })
-
-
-
 
     function fitTo(objects) {
         const bounds = objects.reduce(
@@ -135,6 +126,7 @@ const MapContent = () => {
                                     <WMSLayer />
                                 </LayerGroup>
                             </LayersControl.Overlay>
+
                             <LayersControl.Overlay name="Airport">
                                 <LayerGroup>
                                     {/* EP3 */}
@@ -194,7 +186,6 @@ const MapContent = () => {
                                 </LayerGroup>
                             </LayersControl.Overlay>
 
-
                             <LayersControl.Overlay name="Map click" checked >
                                 <LayerGroup>
                                     {/* EP17 */}
@@ -205,18 +196,16 @@ const MapContent = () => {
                                 </LayerGroup>
                             </LayersControl.Overlay>
 
-                        
-
                         </LayersControl>
 
                         {/* Widgets */}
                         <LeafletDrawControl
                             onDrawCreated={handleDrawCreated}
                         />
+                        
                     </MapContainer>
                 </div>
                 <div className='col-2'>
-
                     <form onSubmit={handleSubmit}>
                         <div className='form-group'>
                             <label>Title</label>
@@ -265,11 +254,7 @@ const MapContent = () => {
                                 type='submit'>Submit</button>
                         </div>
                     </form>
-
-
-
                 </div>
-
             </div>
         </div >
     )
